@@ -157,6 +157,7 @@ make && make install
 
 #安装sersync
 cd /app/local
+#在国内下面的这个链接北墙，同志们可以直接clone项目，项目中已经有编译好的二进制存在
 wget https://sersync.googlecode.com/files/sersync2.5.4_64bit_binary_stable_final.tar.gz
 tar zxf sersync2.5.4_64bit_binary_stable_final.tar.gz
 mv /app/local/GNU-Linux-x86/ /app/local/sersync
@@ -260,6 +261,9 @@ file://E:\sersync   (0 folders, 3 files, 1.88 MB, 1.88 MB in total.)
     rsync-3.1.1.tar.gz    869.26 KB
     sersync2.5.4_64bit_binary_stable_final.tar.gz 710.24 KB
 ```
-
+##【注意】
+ - 避免在配置文件的配置项后面写注释，这些注释会被当做内容进行解析从而导致错误出现；
+ - 部署过过程出现问题可以查看``tailf /var/log/rsyncd.log `` 快速定位错误；
+ - centos7 部署时添加防火墙列外使用firewall 命令，方法可以google一下；
 sersync - https://github.com/wsgzao/sersync
 
